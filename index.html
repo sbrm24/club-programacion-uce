@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Club de Programación UCE</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <strong class="brand">&lt;/&gt; Club UCE</strong>
+  <nav id="menu" aria-label="Secciones"></nav>
+  <button id="fs" class="btn" title="Pantalla completa (F)">⛶</button>
+</header>
+
+<main id="deck">
+
+  <!-- 1. PORTADA · 50 s -->
+  <section class="slide active" data-title="Inicio" data-time="50 s">
+    <div class="hero">
+      <p class="chip">Club de Programación UCE</p>
+      <h1>Aprende. Crea.<br>Presenta.</h1>
+      <p class="lead">Tres niveles. Proyectos reales. Una feria tecnológica.</p>
+      <p class="chip">1.º, 2.º y 3.º de Bachillerato · UCE · 2026-2027</p>
+      <button class="btn big" data-go="next">Empezar</button>
+    </div>
+    <div class="code-win" aria-hidden="true">
+      <i></i><i></i><i></i>
+      <pre><span class="c1">&lt;h1&gt;</span>Hola, mundo<span class="c1">&lt;/h1&gt;</span>
+<span class="c2">body</span> { <span class="c3">color</span>: cyan; }
+<span class="c3">echo</span> <span class="c1">"Mi primer sitio"</span>;</pre>
+    </div>
+  </section>
+
+  <!-- 2. TRES NIVELES · 1 min -->
+  <section class="slide" data-title="Niveles" data-time="1 min">
+    <h2>Tres niveles, una ruta</h2>
+    <div class="grid3">
+      <article class="card lv1"><span class="ico">🧱</span><h3>ByteCraft</h3><p class="tag">Nivel básico</p><p class="tag">Scratch → Python · 56 h</p></article>
+      <article class="card lv2 star"><span class="ico">🌐</span><h3>InnovaWeb</h3><p class="tag">Nivel intermedio</p><p class="tag">HTML5, CSS, Maquetación, PHP · 40 h</p><span class="badge">Protagonista</span></article>
+      <article class="card lv3"><span class="ico">🏠</span><h3>DomoticaLab</h3><p class="tag">Nivel avanzado</p><p class="tag">Arduino y ESP32 · 56 h</p></article>
+    </div>
+    <div class="path" aria-hidden="true"><b></b><b></b><b></b></div>
+  </section>
+
+  <!-- 3. BYTECRAFT · 1 min -->
+  <section class="slide" data-title="ByteCraft" data-time="1 min">
+    <div class="split">
+      <div>
+        <p class="chip">Nivel básico</p>
+        <h2>ByteCraft</h2>
+        <p class="lead">Scratch → Python · 56 h</p>
+        <ul class="kw">
+          <li>🧠 Pensamiento desconectado · 8 h</li>
+          <li>🎬 Scratch: entorno y animación · 16 h</li>
+          <li>🧩 Bloques avanzados, funciones y listas · 16 h</li>
+          <li>🐍 Python: el salto al código texto · 16 h</li>
+        </ul>
+        <p class="chip">🎮 Producto: videojuego interactivo en Scratch, en parejas</p>
+      </div>
+      <div class="art art1" aria-hidden="true"><span>🧱</span><span>⚙️</span><span>💡</span></div>
+    </div>
+  </section>
+
+  <!-- 4. INNOVAWEB · 3 min -->
+  <section class="slide hot" data-title="InnovaWeb" data-time="3 min">
+    <p class="chip">Nivel intermedio</p>
+    <h2 class="huge">InnovaWeb</h2>
+    <p class="lead">Aprende a crear sitios web desde cero.</p>
+    <div class="stats">
+      <div><b data-count="40">0</b><span>horas</span></div>
+      <div><b data-count="4">0</b><span>módulos</span></div>
+      <div><b data-count="3">0</b><span>productos finales</span></div>
+    </div>
+    <div class="tech"><span>HTML5</span><span>CSS</span><span>Maquetación</span><span>PHP</span></div>
+  </section>
+
+  <!-- 5. MÓDULOS -->
+  <section class="slide hot" data-title="Módulos" data-time="3 min">
+    <h2>Ruta de aprendizaje</h2>
+    <div class="route" id="route"></div>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="panel" id="modPanel" aria-live="polite"></div>
+  </section>
+
+  <!-- 6. DEMO -->
+  <section class="slide hot" data-title="Demo web" data-time="1 min">
+    <h2>Construye una página en vivo</h2>
+    <div class="demo">
+      <div class="controls" id="demoBtns"></div>
+      <div class="browser" id="browser">
+        <div class="bar"><i></i><i></i><i></i><em>mi-sitio.html</em></div>
+        <div class="page" id="page"><p class="empty">Toca los botones para añadir partes ↑</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PRODUCTOS · 2 min -->
+  <section class="slide hot" data-title="Productos" data-time="2 min">
+    <h2>Lo que vas a construir</h2>
+    <div class="grid3" id="products"></div>
+    <p class="hint">Toca una tarjeta para descubrirla</p>
+  </section>
+
+  <!-- 8. DOMOTICALAB · 1 min -->
+  <section class="slide" data-title="DomoticaLab" data-time="1 min">
+    <div class="split">
+      <div>
+        <p class="chip">Nivel avanzado</p>
+        <h2>DomoticaLab</h2>
+        <p class="lead">Prueba la vivienda inteligente.</p>
+        <div class="tech"><span>Arduino Uno</span><span>ESP32</span><span>Bluetooth</span><span>Sensores</span><span>Actuadores</span><span>Tinkercad</span></div>
+        <p class="tag">56 h · 2 h semanales durante 7 meses</p>
+        <div class="controls" id="homeBtns"></div>
+        <p class="chip">🏡 Producto: maqueta «Vivienda Sostenible, Inteligente y Segura», en parejas</p>
+      </div>
+      <svg id="house" viewBox="0 0 320 260" role="img" aria-label="Vivienda inteligente">
+        <polygon points="20,110 160,20 300,110" class="roof"/>
+        <rect x="40" y="110" width="240" height="130" class="wall"/>
+        <rect id="win" x="60" y="135" width="70" height="55" rx="6" class="win"/>
+        <g id="door"><rect x="200" y="150" width="50" height="90" rx="4" class="door"/><circle cx="240" cy="198" r="3" fill="#fff"/></g>
+        <g id="fan" class="fan"><circle cx="95" cy="75" r="4"/><path d="M95 75 l-16 -8 M95 75 l16 8 M95 75 l-8 16 M95 75 l8 -16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></g>
+        <text id="alarm" x="160" y="70" text-anchor="middle" font-size="30">🔒</text>
+        <text id="temp" x="160" y="255" text-anchor="middle" fill="#fff" font-size="14">📱 Bluetooth: en espera</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 9. GAMIFICACIÓN · 1 min -->
+  <section class="slide" data-title="Gamificación" data-time="1 min">
+    <h2>Gamificación para docentes</h2>
+    <p class="lead">2 h semanales · 10 semanas · cada semana, un producto</p>
+    <div class="grid3">
+      <article class="card lv1"><span class="ico">📊</span><h3>Evaluación formativa</h3><p class="tag">Sem. 1–4: cuestionarios, flashcards, pizarras cooperativas y tablero con XP e insignias</p></article>
+      <article class="card lv2"><span class="ico">📖</span><h3>Narrativa e interacción</h3><p class="tag">Sem. 5–8: breakout digital, mapas de misiones y vídeos interactivos</p></article>
+      <article class="card lv3"><span class="ico">🔗</span><h3>Integración con plataformas educativas</h3><p class="tag">Sem. 9–10: aula virtual (LMS) con desbloqueos y rúbricas de nivel</p></article>
+    </div>
+  </section>
+
+  <!-- 10. CIERRE -->
+  <section class="slide" data-title="Cierre" data-time="incluido">
+    <h2>Así lo hacemos</h2>
+    <div class="phases"><span>Sentir y explorar</span><span>Idear y diseñar</span><span>Desarrollar y experimentar</span><span>Validar y compartir</span></div>
+    <div class="grid4">
+      <article class="card"><span class="ico">🔬</span><h3>STEAM</h3><p class="tag">Ciencia, Tecnología, Ingeniería, Artes y Matemáticas</p></article>
+      <article class="card"><span class="ico">🛠️</span><h3>Aprendizaje basado en proyectos</h3><p class="tag">También basado en problemas</p></article>
+      <article class="card"><span class="ico">🎪</span><h3>TecnoFest</h3><p class="tag">Casa abierta: videojuegos, páginas web y prototipos robóticos</p></article>
+      <article class="card"><span class="ico">💻</span><h3>Proyectos prácticos</h3><p class="tag">De consumidores a creadores de tecnología</p></article>
+    </div>
+    <p class="lead end">¿Listo para crear el tuyo? Únete al Club.</p>
+  </section>
+
+</main>
+
+<footer class="ctrl">
+  <button class="btn" data-go="prev" aria-label="Anterior">◀</button>
+  <div class="prog"><div id="bar"></div></div>
+  <span id="count">1 / 10</span>
+  <button class="btn" data-go="next" aria-label="Siguiente">▶</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
